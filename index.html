@@ -1003,7 +1003,7 @@ function saveToken() {
 
 // ── INIT ──
 window.addEventListener('DOMContentLoaded', () => {
-  if (!NOTION_TOKEN || NOTION_TOKEN.length < 20) {
+  if (!NOTION_TOKEN || NOTION_TOKEN.length < 20 || !ANTHROPIC_KEY || ANTHROPIC_KEY.length < 20) {
     ['peliculas','series','libros'].forEach(t => {
       document.getElementById(`list-${t}`).innerHTML = `
         <div class="error-box">
